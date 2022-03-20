@@ -1,0 +1,16 @@
+<section class="auth-container login">
+  <h4>Login</h4>
+  {{>form-errors this}}
+  <form method="post" action="login">
+    {{#each inputs}}
+      {{>form-input this}}
+    {{/each}}
+    <div class="footer-container">
+        <a href="/register">Register</a>
+        <div class="footer_container--right">
+            <input type="reset" class="btn btn-tertiary" value="Clear">
+            <input type="submit" class="btn btn-primary" value="Login">
+        </div>
+    </div>
+  </form>
+</section>

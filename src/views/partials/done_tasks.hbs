@@ -1,0 +1,11 @@
+<h2>Things you've done</h2>
+<ul class="to_do_done">
+    {{#each done}}
+        {{#list_item (append category.name " task_container") id}}
+            <span class="task">{{name}}</span>
+            {{#button "to_do_delete" "submit"}}
+                <i class="fa-solid fa-trash-can"></i>
+            {{/button}}
+        {{/list_item}}
+    {{/each}}
+</ul>

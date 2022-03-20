@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="header layout">
+        <div class="header_container">
+            <div class="header_left">
+                <img src="/images/logo.png" alt="logo header">
+                <h1>Just Do It</h1>
+            </div>
+            <div class="header_right">
+                <a href="">
+                    <span class="logout">
+                        Logout
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <main class="layout">
+        <div class="left_menu">
+            <h2>Categories</h2>
+            <ul>
+                <li class="active"><a href="">Default</a></li>
+                <li><a href="">Household</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h2>We've got things to do!</h2>
+            <div class="to_do_create">
+                <form class="task_container">
+                    <input type="text" class="to_do_create_value" placeholder="what is your task?">
+                    <button type="button" class="to_do_create_button">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </form>
+            </div>
+            <ul class="to_do_list">
+                <li class="task_container">
+                    <button type="button" class="to_do_complete">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <span class="task">Working for programming 3</span>
+                    <button type="button" class="to_do_delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                    <button type="button" class="to_do_edit">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                </li>
+                <li class="task_container">
+                    <button type="button" class="to_do_complete">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <span class="task">Chatting with other students</span>
+                    <button type="button" class="to_do_delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                    <button type="button" class="to_do_edit">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                </li>
+            </ul>
+            <h2>Things you've done</h2>
+            <ul class="to_do_done">
+                <li class="task_container">
+                    <span class="task">Doing some homework</span>
+                    <button type="button" class="to_do_delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

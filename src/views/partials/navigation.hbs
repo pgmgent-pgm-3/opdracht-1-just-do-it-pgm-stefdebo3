@@ -1,0 +1,15 @@
+<div class="header_container">
+    <div class="header_left">
+        <img src="/images/logo.png" alt="logo header">
+        <h1>Just Do It</h1>
+    </div>
+    <div class="header_right">
+        {{#with data.userData.user_meta}}
+            <p>Welcome, {{firstname}} {{lastname}}</p>
+            <input type="hidden" name="user_id" value="{{id}}" class="userId">
+        {{/with}}
+        <form class="logout" action="/logout" method="post">
+            <button type="submit" class="btn btn-secondary">Logout</button>
+        </form>
+    </div>
+</div>

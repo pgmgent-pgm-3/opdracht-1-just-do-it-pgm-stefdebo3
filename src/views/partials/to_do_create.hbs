@@ -1,0 +1,16 @@
+<h2>We've got things to do!</h2>
+<div class="to_do_create">
+    <form action="/api/Task" class="action_container" method="post">
+        <input type="text" name="name" class="to_do_create_value" placeholder="what is your task?">
+        
+        <select name="category">
+            {{#each categories}}
+                <option>{{name}}</option>
+            {{/each}}
+        </select>
+        <input type:"hidden" name="userId" class="hidden" value="{{userData.id}}">
+        {{#button "to_do_create_button" "submit"}}
+            <i class="fa-solid fa-plus"></i>
+        {{/button}}
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<ul class="to_do_list">
+    {{#each toDo}}
+        {{#list_item (append category.name " task_container") id}}
+            {{#button "to_do_complete" "submit"}}
+                <i class="fa-solid fa-check"></i>
+            {{/button}}
+            <div class="task"><span>{{name}}</span></div>
+            {{#button "to_do_delete" "submit"}}
+                <i class="fa-solid fa-trash-can"></i>
+            {{/button}}
+            {{#button "to_do_edit" "submit"}}
+                <i class="fa-solid fa-pen-to-square"></i>
+            {{/button}}
+        {{/list_item}}
+    {{/each}}
+</ul>

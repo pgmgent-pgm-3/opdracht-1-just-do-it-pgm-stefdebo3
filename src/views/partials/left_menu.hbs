@@ -1,0 +1,38 @@
+<div class="left_menu">
+    <h2>Categories</h2>
+    <form action="/api/Category" class="action_container task_container--create" method="post">
+        <input type="text" name="name" class="to_do_create_value" placeholder="Add a new category">
+        <input type="hidden" name="userId" class="hidden" value="{{userData.id}}">
+        {{#button "to_do_create_button" "submit"}}
+            <i class="fa-solid fa-plus"></i>
+        {{/button}}
+    </form>
+    <ul>
+    {{#list_item "category__list_item active" "All"}}
+    All
+    {{/list_item}}
+        {{#each categories}}
+            {{#list_item "category__list_item category_drop_zone" name}}
+                {{name}}
+            {{/list_item}}
+        {{/each}}
+    </ul>
+    <div class="delete_category_container action_container">
+        <select class="category_delete_select">
+            {{#each categories}}
+                {{#if isDefault }}
+                {{else}}
+                <option class="{{id}}">{{name}}</option>
+                {{/if}}
+            {{/each}}
+        </select>
+        <input type="hidden" name="userId" class="hidden" value="{{userData.id}}">
+        {{#button "delete_category_button" "submit"}}
+            <i class="fa-solid fa-trash-can"></i>
+        {{/button}}
+    </div>
+    <div class="theme_switcher_container">
+        <div class="theme_switcher_circle">
+        </div>
+    </div>
+</div>
